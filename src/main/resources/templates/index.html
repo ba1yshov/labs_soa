@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div align="center">
+    <form th:action="@{/}" th:object="${signIn}" method="post">
+        <input type="text" th:field="*{login}"> <input type="submit" value="Save">
+    </form>
+    <p th:text="'Hello, ' + ${signIn.login} + '!'" />
+</div>
+</body>
+</html>
